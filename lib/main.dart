@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_market/controller/address_controller.dart';
 import 'package:food_market/ui/pages/pages.dart';
 import 'package:get/get.dart';
 
@@ -11,8 +12,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Get.put(AddressController());
     return const GetMaterialApp(
-      home: GeneralPages(),
+      debugShowCheckedModeBanner: false,
+      home: SignInPage(),
     );
   }
 }
