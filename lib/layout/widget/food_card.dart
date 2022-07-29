@@ -20,17 +20,20 @@ class FoodCard extends StatelessWidget {
           ],
           borderRadius: BorderRadius.circular(8)),
       child: Column(children: [
-        Container(
-          height: 140,
-          decoration: BoxDecoration(
-            borderRadius: const BorderRadius.only(
-              topLeft: Radius.circular(8),
-              topRight: Radius.circular(8),
+        Builder(builder: (context) {
+          return Container(
+            height: 140,
+            decoration: BoxDecoration(
+              borderRadius: const BorderRadius.only(
+                topLeft: Radius.circular(8),
+                topRight: Radius.circular(8),
+              ),
+              image: DecorationImage(
+                  image: NetworkImage(foodModels.picturePath),
+                  fit: BoxFit.cover),
             ),
-            image: DecorationImage(
-                image: NetworkImage(mockFood.picturePath), fit: BoxFit.cover),
-          ),
-        ),
+          );
+        }),
         Container(
           margin: const EdgeInsets.fromLTRB(12, 12, 12, 6),
           width: 210,

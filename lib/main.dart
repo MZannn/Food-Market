@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_market/controller/address_controller.dart';
 import 'package:food_market/controller/dashboard_controller.dart';
+import 'package:food_market/controller/home_controller.dart';
 import 'package:food_market/layout/pages/pages.dart';
 import 'package:get/get.dart';
 
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     Get.put(AddressController());
     Get.put(DashboardController());
+    Get.put(HomeController());
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
       home: DashboardPage(),
