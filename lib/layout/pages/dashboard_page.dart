@@ -20,10 +20,12 @@ class DashboardPage extends StatelessWidget {
                   onPageChanged: (index) {
                     controller.setIndex(index);
                   },
-                  children: const [
-                    HomePage(),
-                    Center(child: Text("Order")),
-                    Center(child: Text("Profile")),
+                  children: [
+                    const HomePage(),
+                    const OrderHistoryPage(),
+                    ProfilePage(
+                      userModels: mockUser,
+                    ),
                   ],
                 ),
               ),

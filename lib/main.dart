@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:food_market/controller/address_controller.dart';
 import 'package:food_market/controller/dashboard_controller.dart';
+import 'package:food_market/controller/food_detail_controller.dart';
 import 'package:food_market/controller/home_controller.dart';
+import 'package:food_market/controller/order_history_controller.dart';
+import 'package:food_market/controller/profile_controller.dart';
 import 'package:food_market/layout/pages/pages.dart';
+import 'package:intl/date_symbol_data_local.dart';
 import 'package:get/get.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await initializeDateFormatting('id_ID', null)
+      .then((_) => runApp(const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -17,6 +23,9 @@ class MyApp extends StatelessWidget {
     Get.put(AddressController());
     Get.put(DashboardController());
     Get.put(HomeController());
+    Get.put(FoodDetailController());
+    Get.put(OrderHistoryController());
+    Get.put(ProfileController());
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
       home: DashboardPage(),

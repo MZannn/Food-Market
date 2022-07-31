@@ -2,10 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:food_market/controller/address_controller.dart';
 import 'package:food_market/controller/dashboard_controller.dart';
 import 'package:food_market/controller/home_controller.dart';
+import 'package:food_market/controller/profile_controller.dart';
 import 'package:food_market/layout/widget/widgets.dart';
 import 'package:food_market/models/food_models.dart';
+import 'package:food_market/models/transaction_models.dart';
 import 'package:food_market/shared/shared.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
+
+import '../../controller/food_detail_controller.dart';
+import '../../controller/order_history_controller.dart';
+import '../../models/user_models.dart';
 
 part 'general_pages.dart';
 part 'sign_in_page.dart';
@@ -13,3 +20,10 @@ part 'sign_up_page.dart';
 part 'address_page.dart';
 part 'dashboard_page.dart';
 part 'home_page.dart';
+part 'food_detail_page.dart';
+part 'payment_page.dart';
+part 'illustration_page.dart';
+part 'success_order_page.dart';
+part 'success_sign_up_page.dart';
+part 'order_history_page.dart';
+part 'profile_page.dart';

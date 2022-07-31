@@ -35,7 +35,10 @@ class FoodListItem extends StatelessWidget {
                 overflow: TextOverflow.clip,
               ),
               Text(
-                foodModels.price.toString(),
+                NumberFormat.currency(
+                        locale: 'id-ID', symbol: "Rp. ", decimalDigits: 0)
+                    .format(foodModels.price)
+                    .toString(),
                 style: greyText14.copyWith(fontSize: 13),
               ),
             ],

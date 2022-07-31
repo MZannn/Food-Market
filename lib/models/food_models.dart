@@ -1,4 +1,6 @@
-class FoodModels {
+import 'package:equatable/equatable.dart';
+
+class FoodModels extends Equatable {
   final int id;
   final String picturePath;
   final String name;
@@ -7,7 +9,7 @@ class FoodModels {
   final int price;
   final double rate;
 
-  FoodModels({
+  const FoodModels({
     required this.id,
     required this.picturePath,
     required this.name,
@@ -16,9 +18,13 @@ class FoodModels {
     required this.price,
     required this.rate,
   });
+
+  @override
+  List<Object?> get props =>
+      [id, picturePath, name, description, ingredients, price, rate];
 }
 
-List<FoodModels> mockFood = [
+List<FoodModels> mockFood = const [
   FoodModels(
       id: 1,
       picturePath:
